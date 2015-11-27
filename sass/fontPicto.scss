@@ -1,0 +1,12 @@
+@font-face {
+    font-family: $font-picto;
+    src:         url('/fonts/#{$font-picto-filename}.eot?#{$font-picto-version}');
+    src:         url('/fonts/#{$font-picto-filename}.woff?#{$font-picto-version}') format('woff'),
+                 url('/fonts/#{$font-picto-filename}.eot?#{$font-picto-version}#iefix') format('embedded-opentype'),
+                 url('/fonts/#{$font-picto-filename}.ttf?#{$font-picto-version}') format('truetype'),
+                 url('/fonts/#{$font-picto-filename}.svg?#{$font-picto-version}##{$font-picto-filename}') format('svg');
+    font-weight: normal;
+    font-style:  normal;
+}
+
+

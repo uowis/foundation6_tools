@@ -1,0 +1,72 @@
+@mixin container-break() {
+    @include breakpoint(large) {
+        max-width: $large-container;
+    }
+    
+    @include breakpoint(xlarge) {
+        max-width: $xlarge-container;
+    }
+
+    @include breakpoint(xxlarge) {
+        max-width: $xxlarge-container;
+    }
+}
+
+@mixin grid-container-break(
+$columns: null,
+$behavior: null,
+$width: $grid-row-width,
+$cf: true
+) {
+  @include grid-row($columns, $behavior, $width, $cf);
+  @include container-break;
+}
+
+@mixin flex-container-break(
+$behavior: null,
+$width: $grid-row-width,
+$columns: null,
+$base: true){
+    @include  flex-grid-row($behavior, $width, $columns, $base);
+    @include container-break;
+}
+
+@mixin collapse-container() {
+    padding-left: $grid-column-gutter / 2;
+    padding-right: $grid-column-gutter / 2;
+}
+
+@mixin button($color: #323232) {
+  display:       inline-block;
+  padding:       1em 1.5em;
+  border-radius: .1rem;
+  color:         #fff;
+  text-align:    center;
+  background:    $color;
+  transition:    background .3s ease;
+
+  &:hover {
+    background-color: lighten($color, 8);
+  }
+
+  &:active {
+    background-color: darken($color, 8);
+  }
+}
+
+@mixin picto($caracter, $line-height: 1) {
+  content:        $caracter;
+  font-family:    $font-picto;
+  font-variant:   normal;
+  font-weight:    normal;
+  font-style:     normal;
+  text-rendering: optimizelegibility;
+  text-transform: none;
+  line-height:    $line-height;
+}
+
+
+
+
+
+

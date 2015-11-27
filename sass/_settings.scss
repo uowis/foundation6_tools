@@ -1,0 +1,18 @@
+//_________________________________ fonts
+$font-picto-version: 1;
+$font-picto: 'font-picto-#{$font-picto-version}';
+$font-picto-filename: 'fontpicto';
+
+
+//______________________________ responsive width
+$grid-min-margin: 2rem;
+
+$medium-container: rem-calc(640px) - $grid-min-margin * 2;
+$large-container: rem-calc(1024px) - $grid-min-margin * 2;
+$xlarge-container: rem-calc(1200px) - $grid-min-margin * 2;
+$xxlarge-container: rem-calc(1440px) - $grid-min-margin * 2;
+
+
+@import 'tools';
+@import 'fontPicto';
+
